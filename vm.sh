@@ -69,7 +69,7 @@ for assinatura in "${subscription[@]}"
       do 
          nome=$(date +"%d%m%Y%H%M%S")
          VMList[$i]=$nome
-         echo "Criando VM $i na região $regiao da assinatura $assinatura"
+         echo "Criando VM $nome ($i) na região $regiao da assinatura $assinatura"
          az vm create --resource-group myResourceGroup --name $nome --image UbuntuLTS --generate-ssh-keys --location $regiao --size "standard_f2" --no-wait
      done
      
