@@ -71,7 +71,15 @@ for assinatura in "${subscription[@]}"
      nome=$(date +"%d%m%Y%H%M%S")
 
      let "perc= $(( $count * 100 / (${#location[@]} * ${#subscription[@]}) ))"
-
+     
+     for i {1..6)
+      do
+         echo "Criando VM $i"
+         az vm create --resource-group myResourceGroup --name $nome --image UbuntuLTS --generate-ssh-keys --location $regiao --size "standard_f2" --no-wait
+     done
+     
+     
+     
      echo "Criando Lote $nome $count2/${#location[@]} em $regiao da Subscription $assinatura $count1/${#subscription[@]}  > $perc% Concluído"
      az batch account create --resource-group myResourceGroup --name $nome --location $regiao --only-show-errors
      echo
