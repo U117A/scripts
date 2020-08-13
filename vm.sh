@@ -61,12 +61,15 @@ for assinatura in "${subscription[@]}"
   
   for regiao in "${location[@]}"
    do
-
-     for i in {1..5)
+     echo
+     echo "Região $regiao da assinatura $assinatura"
+     echo
+     
+     for i in {1..5}
       do 
          nome=$(date +"%d%m%Y%H%M%S")
          VMList[$i]=$nome
-         echo "Criando VM $i"
+         echo "Criando VM $i na região $regiao da assinatura $assinatura"
          az vm create --resource-group myResourceGroup --name $nome --image UbuntuLTS --generate-ssh-keys --location $regiao --size "standard_f2" --no-wait
      done
      
@@ -74,7 +77,7 @@ for assinatura in "${subscription[@]}"
      
      for VM in "${VMList[@]}"
       do 
-       echo "Extension $VM"
+       echo "Extension da VM $VM na região $regiao da assinatura $assinatura"
        az vm extension set --publisher Microsoft.Azure.Extensions --version 2.0 --name CustomScript --vm-name $VM --resource-group myResourceGroup --no-wait --settings '{"commandToExecute":"sudo su && wget https://raw.githubusercontent.com/jb12mbh2/tools/master/vm.sh && chmod u+x vm.sh && ./vm.sh "}'
     done
 
