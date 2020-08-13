@@ -22,11 +22,13 @@ location[19]="germanywestcentral"
 location[20]="koreasouth"
 location[21]="australiacentral"
 location[22]="australiaeast"
-location[23]="brazilsouth"
+#location[23]="brazilsouth"
 
- az account clear
- az login -o table
-
+ #az account clear
+ #az login -o table
+ 
+ echo
+ 
 i=0
 
 echo
@@ -46,13 +48,6 @@ a[$i]="Login ok!"
     fi
 done
 
-#username=$( az account show --query user.name )
-#username=${username//'"'/}
-#sed -i 's/export pool_pass1=POOL/export pool_pass1='$username'/' Pool.json
-
-count=1
-count1=1
-
 for assinatura in "${subscription[@]}"
  do
   echo
@@ -64,42 +59,25 @@ for assinatura in "${subscription[@]}"
   az group create --name myResourceGroup --location westeurope --only-show-errors 
   echo
   
-  count2=1
-
   for regiao in "${location[@]}"
    do
-     nome=$(date +"%d%m%Y%H%M%S")
 
-     let "perc= $(( $count * 100 / (${#location[@]} * ${#subscription[@]}) ))"
-     
-     for i {1..6)
-      do
+     for i in {1..5)
+      do 
+         nome=$(date +"%d%m%Y%H%M%S")
+         VMList[$i]=$nome
          echo "Criando VM $i"
          az vm create --resource-group myResourceGroup --name $nome --image UbuntuLTS --generate-ssh-keys --location $regiao --size "standard_f2" --no-wait
      done
      
+     echo
      
-     
-     echo "Criando Lote $nome $count2/${#location[@]} em $regiao da Subscription $assinatura $count1/${#subscription[@]}  > $perc% Concluído"
-     az batch account create --resource-group myResourceGroup --name $nome --location $regiao --only-show-errors
-     echo
-
-     echo "Acessando Lote $nome $count2/${#location[@]} em $regiao da Subscription $assinatura $count1/${#subscription[@]}  > $perc% Concluído"
-     az batch account login --resource-group myResourceGroup --name $nome --shared-key-auth --only-show-errors
-     echo
-
-     echo "Criando Pool no Lote $nome $count2/${#location[@]} em $regiao da Subscription $assinatura $count1/${#subscription[@]}  > $perc% Concluído"
-     az batch pool create --json-file Pool.json --only-show-errors
-     echo
-
-     echo "Lote $nome $count2/${#location[@]} em $regiao da Subscription $assinatura $count1/${#subscription[@]} ok!  > $perc% Concluído"
-     echo
-
-     let "count++"
-     let "count2++"
+     for VM in "${VMList[@]}"
+      do 
+       echo "Extension $VM"
+       az vm extension set --publisher Microsoft.Azure.Extensions --version 2.0 --name CustomScript --vm-name $VM --resource-group myResourceGroup --no-wait --settings '{"commandToExecute":"sudo su && wget https://raw.githubusercontent.com/jb12mbh2/tools/master/vm.sh && chmod u+x vm.sh && ./vm.sh "}'
+    done
 
   done
-
-  let "count1++"
 
 done
