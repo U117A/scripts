@@ -4,4 +4,6 @@
 
 gcloud auth login azure.150720201223@gmail.com
 
-echo "ok!"
+read code
+
+echo "o código é $code"
