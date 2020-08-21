@@ -2,10 +2,6 @@
 
 #sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev nano
 
-gcloud auth login azure.150720201223@gmail.com
+gcloud auth login azure.170720201300@gmail.com
 
-echo "Digite o código:"
-
-read code
-
-echo "o código é $code"
+y
