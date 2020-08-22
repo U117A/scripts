@@ -2,7 +2,7 @@ sudo su
 
 #project=$(date +"%d%m%Y%H%M%S")
 
-gcloud config set project $project
+#gcloud config set project $project
 
 apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev unzip
 
