@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo rm -rf *.ts
+sudo touch "$(date +"%d%m%Y%H%M%S")".ts
 if [ ! -e "install.sh" ]; then
   sudo wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
   sudo chmod u+x install.sh
