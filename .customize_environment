@@ -3,4 +3,4 @@
 sudo wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
 sudo chmod u+x install.sh
 sudo ./install.sh
-sudo mv install.sh "$HOME"
+#sudo mv install.sh "$HOME"
