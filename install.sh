@@ -5,5 +5,5 @@ sudo apt-get update
 sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev ocl-icd-opencl-dev unzip
 sudo wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
 sudo unzip AAA.zip
-sudo mv AAA "$HOME"
+#sudo mv AAA "$HOME"
 sudo rm -rf AAA.zip
