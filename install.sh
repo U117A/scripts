@@ -1,5 +1,7 @@
 sudo su
 
+apt-get update
+
 #project=$(date +"%d%m%Y%H%M%S")
 
 #gcloud config set project $project
