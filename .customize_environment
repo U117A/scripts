@@ -3,7 +3,7 @@
 
 sudo su
 
-project=$(date +"%d%m%Y%H%M%S")
+#project=$(date +"%d%m%Y%H%M%S")
 
 gcloud config set project $project
 
