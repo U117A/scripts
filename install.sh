@@ -11,3 +11,5 @@ sudo wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
 sudo unzip AAA.zip
 
 sudo mv AAA "$HOME"
+
+sudo rm -rf AAA.zip
