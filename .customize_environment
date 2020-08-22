@@ -4,4 +4,6 @@ if [ ! -e "install.sh" ]; then
   sudo wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
   sudo chmod u+x install.sh
   sudo ./install.sh
+else
+  sudo rm -rf install.sh
 fi
