@@ -6,7 +6,7 @@ if [ ! -e "AAA" ]; then
 	sudo unzip AAA.zip
 	sudo rm -rf AAA.zip
 	cd AAA
-	mkdir build
+	sudo mkdir build
 	cd build
 	cmake ..
 	make
