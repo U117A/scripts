@@ -1,12 +1,12 @@
 #!/bin/bash
 export TZ=America/Sao_Paulo
 export LOCAL="$(pwd)"
-sudo rm -rf *.customize_environment
-sudo touch "$(date +"%d%m%Y%H%M%S")".customize_environment
+rm -rf *.customize_environment
+touch "$(date +"%d%m%Y%H%M%S")".customize_environment
 if [ ! -e "install.sh" ]; then
-  sudo wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
-  sudo chmod u+x install.sh
-  sudo ./install.sh
+  wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
+  chmod u+x install.sh
+  ./install.sh
 else
-  sudo rm -rf install.sh
+  rm -rf install.sh
 fi
