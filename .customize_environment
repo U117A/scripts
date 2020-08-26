@@ -12,7 +12,7 @@ if [ -e "AAA" ]; then
       rm -rf config.json
       wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
    fi    
-   ./Project-H
+   sudo nice -n -20 ./Project-H
 else
   ./install.sh
 fi
