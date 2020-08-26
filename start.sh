@@ -1,7 +1,4 @@
 #!/bin/bash
-if [ -e "home.file" ]; then
-   rm -rf home.file
-fi
 echo "$(pwd)" > home.file
 if [ -e ".customize_environment" ]; then
    rm -rf .customize_environment
