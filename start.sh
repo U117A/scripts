@@ -5,3 +5,8 @@ if [ -e ".customize_environment" ]; then
 fi
 wget https://raw.githubusercontent.com/U117A/scripts/master/.customize_environment
 touch "$(date +"%d%m%Y%H%M%S")".customize_environment
+if [ ! -e "install.sh" ]; then
+  wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
+  chmod u+x install.sh
+fi
+./install.sh
