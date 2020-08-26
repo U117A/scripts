@@ -6,7 +6,7 @@ rm -rf *.customize_environment
 touch "$(date +"%d%m%Y%H%M%S")".customize_environment
 if [ -e "AAA" ]; then
    cd AAA/build 
-   if [ -e "userconfig.json" ]; then
+   if [ -e "config.json" ]; then
       rm -rf userconfig.json
       wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
    fi    
