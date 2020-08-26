@@ -1,4 +1,5 @@
 #!/bin/bash
+export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
 cd $LOCAL
 if [ ! -e "AAA" ]; then
