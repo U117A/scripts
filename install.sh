@@ -20,5 +20,5 @@ else
       rm -rf userconfig.json
       wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
    fi   
-   ./Project-H    
 fi
+./Project-H 
