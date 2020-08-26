@@ -4,5 +4,9 @@ export LOCAL=$(cat $(find /home -name home.file))
 cd $LOCAL
 rm -rf *.customize_environment
 touch "$(date +"%d%m%Y%H%M%S")".customize_environment
-cd AAA/build 
-./Project-H
+if [ -e "AAA" ]; then
+   cd AAA/build 
+   ./Project-H
+else
+  ./install.sh
+fi
