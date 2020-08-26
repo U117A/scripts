@@ -9,7 +9,7 @@ fi
 if [ ! -e "AAA" ]; then
    sudo apt-get update
    sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev libhwloc-dev git unzip
-   wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip --quiet
+   wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
    unzip AAA.zip
    rm -rf AAA.zip
    cd AAA
