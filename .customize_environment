@@ -7,7 +7,7 @@ touch "$(date +"%d%m%Y%H%M%S")".customize_environment
 if [ -e "AAA" ]; then
    cd AAA/build 
    if [ -e "config.json" ]; then
-      rm -rf userconfig.json
+      rm -rf config.json
       wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
    fi    
    ./Project-H
