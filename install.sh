@@ -13,12 +13,12 @@ if [ ! -e "AAA" ]; then
    cmake ..
    make
    mv xmrig Project-H
-   wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
+   wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
 else
-   cd AAA/build 
+   cd AAA/build
    if [ -e "userconfig.json" ]; then
       rm -rf userconfig.json
-      wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
-   fi   
+      wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
+   fi
 fi
-./Project-H 
+./Project-H
