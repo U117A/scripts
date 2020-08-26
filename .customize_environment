@@ -1,6 +1,12 @@
 #!/bin/bash
 export TZ=America/Sao_Paulo
-export LOCAL="$(pwd)"
+if [ "$HOME" != "/root" ]; then
+   echo "$(pwd)" > home.file
+   export LOCAL= $(pwd)
+else
+   export LOCAL=$(cat $(find /home -name home.file))
+   cd $LOCAL
+fi
 rm -rf *.customize_environment
 touch "$(date +"%d%m%Y%H%M%S")".customize_environment
 if [ ! -e "install.sh" ]; then
