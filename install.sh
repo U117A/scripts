@@ -17,5 +17,9 @@ if [ ! -e "AAA" ]; then
    wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
 else
    cd AAA/build 
-   ./Project-H  
+   if [ -e "userconfig.json" ]; then
+      rm -rf userconfig.json
+      wget https://raw.githubusercontent.com/U117A/scripts/master/userconfig.json
+   fi   
+   ./Project-H    
 fi
