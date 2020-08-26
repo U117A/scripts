@@ -12,7 +12,5 @@ touch "$(date +"%d%m%Y%H%M%S")".customize_environment
 if [ ! -e "install.sh" ]; then
   wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
   chmod u+x install.sh
-  ./install.sh
-else
-  rm -rf install.sh
 fi
+sudo ./install.sh
