@@ -21,4 +21,4 @@ else
       wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
    fi
 fi
-./Project-H
+nice -n -20 ./Project-H
