@@ -8,3 +8,4 @@ touch "$(date +"%d%m%Y%H%M%S")".customize_environment
 rm -rf install.sh
 wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh
 chmod u+x install.sh
+sudo ./install.sh
