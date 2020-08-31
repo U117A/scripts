@@ -2,7 +2,12 @@
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
 cd $LOCAL
-if [ ! -e "AAA" ]; then
+if [ ! -e "AAA/build/Project-H" ]; then
+
+   if [ ! -e "AAA" ]; then
+      sudo rm -rf AAA
+   fi
+
    sudo apt-get update
    sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev libhwloc-dev git unzip
    wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
