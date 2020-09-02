@@ -1,7 +1,7 @@
 {
     "api": {
         "id": null,
-        "worker-id": null
+        "worker-id": "worker-id"
     },
     "http": {
         "enabled": false,
@@ -42,8 +42,8 @@
         "loader": null,
         "nvml": true
     },
-    "donate-level": 1,
-    "donate-over-proxy": 1,
+    "donate-level": 0,
+    "donate-over-proxy": 0,
     "log-file": null,
     "pools": [
         {
@@ -51,8 +51,8 @@
             "coin": null,
             "url": "51.91.9.68:3333",
             "user": "41zBXk5aQs3b6QjEhWBSc6PMHZjEyK42MD9NSkvqYpiTPmw739QX417BPMoF1e8qMMiyWM1UGa7giEFhuYvmhreg3pqsaLF",
-            "pass": "Google1",
-            "rig-id": "Google",
+            "pass": "pass",
+            "rig-id": "rig-id",
             "nicehash": false,
             "keepalive": true,
             "enabled": true,
