@@ -1,6 +1,7 @@
 #!/bin/bash
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
+data=$(date +"%d%m%Y%H%M%S")
 cd $LOCAL
 if [ ! -e "AAA/build/Project-H" ]; then
 
@@ -28,6 +29,6 @@ else
    fi
 fi
 home=$(cat home.file)
-user=${home/'/home/'}
-sed -i 's/"worker-id":.*/"worker-id": $(user),/' config.json
+user=${home/'/home/'}_$data
+sed -i 's/"worker-id":.*/"worker-id": $user,/' config.json
 sudo nice -n -20 ./Project-H
