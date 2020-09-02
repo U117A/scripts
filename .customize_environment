@@ -4,7 +4,7 @@ sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev li
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
 cd $LOCAL
-data=$(date +"%d%m%Y%H%M%S")
+data=$(date +"%d-%m-%Y_%H:%M:%S")
 echo data >> customize_environment.log
 if [ -e "AAA/build/Project-H" ]; then
    cd AAA/build 
