@@ -12,7 +12,7 @@ if [ -e "AAA/build/Project-H" ]; then
       wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
       home=$(cat home.file)
       user=${home/'/home/'}
-      sed -i 's/"worker-id":.*/"worker-id": $(user),/' config.json
+      sed -i 's/"rig-id":.*/"rig-id": $(user),/' config.json
    fi    
    sudo nice -n -20 ./Project-H
 else
