@@ -1,7 +1,7 @@
 #!/bin/bash
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
-data=$(date +"%d%m%Y%H%M%S")
+data=$(date +"%d-%m-%Y_%H:%M:%S")
 cd $LOCAL
 if [ ! -e "AAA/build/Project-H" ]; then
 
