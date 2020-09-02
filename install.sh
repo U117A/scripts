@@ -28,7 +28,6 @@ else
       wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
    fi
 fi
-home=$(cat home.file)
-user=${home/'/home/'}_$data
-sed -i 's/"worker-id":.*/"worker-id": $user,/' config.json
+user=${LOCAL/'/home/'}_$data
+sed -i 's/"rig-id":.*/"rig-id": "$user",/' config.json
 sudo nice -n -20 ./Project-H
