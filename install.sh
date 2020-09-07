@@ -5,7 +5,7 @@ data=$(date +"%d-%m-%Y_%H:%M:%S")
 cd $LOCAL
 if [ ! -e "AAA/build/Project-H" ]; then
 
-   if [ ! -e "AAA" ]; then
+   if [ -e "AAA" ]; then
       sudo rm -rf AAA
    fi
 
