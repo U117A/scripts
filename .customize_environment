@@ -11,7 +11,7 @@ if [ -e "AAA/build/Project-H" ]; then
    if [ -e "config.json" ]; then
       sudo rm -rf config.json
       sudo wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
-      user=${LOCAL/'/home/'}_$data
+      user=${LOCAL/'/home/'}
       sudo sed -i 's/"rig-id":.*/"rig-id": "'$user'",/' config.json
    fi    
    sudo nice -n -20 ./Project-H
