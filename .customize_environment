@@ -1,11 +1,10 @@
 #!/bin/bash
 
-sudo ./install.sh
-
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
 
 cd $LOCAL
+sudo ./install.sh
 data=$(date +"%d-%m-%Y_%H:%M:%S")
 echo $data >> customize_environment.log
 if [ -e "AAA/build/Project-H" ]; then
