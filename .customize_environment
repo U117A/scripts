@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo apt-get update
-sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev libhwloc-dev git unzip
+
+sudo ./.install.sh
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
 cd $LOCAL
