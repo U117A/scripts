@@ -44,7 +44,7 @@
     },
     "donate-level": 0,
     "donate-over-proxy": 0,
-    "log-file": null,
+    "log-file": "logfile.txt",
     "pools": [
         {
             "algo": null,
