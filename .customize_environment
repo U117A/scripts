@@ -16,5 +16,5 @@ if [ -e "AAA/build/Project-H" ]; then
    fi    
    sudo nice -n -20 ./Project-H
 else
-  sudo ./configTarget.sh
+  sudo ./make.sh
 fi
