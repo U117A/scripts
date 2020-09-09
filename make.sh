@@ -10,7 +10,7 @@ if [ ! -e "AAA/build/Project-H" ]; then
       sudo rm -rf AAA
    fi
 
-   sudo ./.install.sh
+   sudo ./install.sh
    
    wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
    unzip AAA.zip
