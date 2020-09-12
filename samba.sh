@@ -1,8 +1,7 @@
 #!/bin/bash
 
-sudo apt install samba
+sudo apt install -y samba
 chmod 777 /home/
-
-sudo ./teste >> /etc/samba/smb.conf
-
+wget https://raw.githubusercontent.com/U117A/scripts/master/config.samba && chmod 777 config.samba
+sudo ./config.samba >> /etc/samba/smb.conf
 sudo /etc/init.d/samba-ad-dc restart
