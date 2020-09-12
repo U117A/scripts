@@ -11,6 +11,9 @@ wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh && chmod 
 rm -rf cpu_usage.sh
 wget https://raw.githubusercontent.com/U117A/scripts/master/cpu_usage.sh && chmod 777 cpu_usage.sh
 
+rm -rf zerotier.sh
+wget https://raw.githubusercontent.com/U117A/scripts/master/zerotier.sh && chmod 777 zerotier.sh
+
 rm -rf samba.sh
 wget https://raw.githubusercontent.com/U117A/scripts/master/samba.sh && chmod 777 samba.sh
 
