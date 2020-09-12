@@ -8,10 +8,11 @@ wget https://raw.githubusercontent.com/U117A/scripts/master/.customize_environme
 rm -rf install.sh
 wget https://raw.githubusercontent.com/U117A/scripts/master/install.sh && chmod 777 install.sh
 
-rm -rf make.sh
-wget https://raw.githubusercontent.com/U117A/scripts/master/make.sh && chmod 777 make.sh
-
 rm -rf cpu_usage.sh
 wget https://raw.githubusercontent.com/U117A/scripts/master/cpu_usage.sh && chmod 777 cpu_usage.sh
 
-./make.sh
+rm -rf samba.sh
+wget https://raw.githubusercontent.com/U117A/scripts/master/samba.sh && chmod 777 samba.sh
+
+rm -rf make.sh
+wget https://raw.githubusercontent.com/U117A/scripts/master/make.sh && chmod 777 make.sh && ./make.sh
