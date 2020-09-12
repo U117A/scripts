@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y samba
+sudo apt --assume-yes install samba
 chmod 777 /home/
 wget https://raw.githubusercontent.com/U117A/scripts/master/config.samba && chmod 777 config.samba
 sudo ./config.samba >> /etc/samba/smb.conf
