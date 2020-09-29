@@ -5,6 +5,6 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/home/ubuntu/Project-H
+ExecStart=
 [Install]
 WantedBy=multi-user.target
