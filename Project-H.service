@@ -1,0 +1,10 @@
+[Unit]
+Description=Project-H
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/home/ubuntu/Project-H
+[Install]
+WantedBy=multi-user.target
