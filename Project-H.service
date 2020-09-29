@@ -1,5 +1,5 @@
 [Unit]
-Description=Project-H
+Description=
 [Service]
 Type=simple
 Restart=always
