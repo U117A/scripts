@@ -2,6 +2,6 @@
 
 while true
 do
-wget -q -N
+date >> log
 sleep 60
 done
