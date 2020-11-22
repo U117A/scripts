@@ -6,6 +6,6 @@ done=(`cat done`)
 
 if [ $id != $done ]; then
    echo "update"
-   pkg install -y python
+   pkg install -y git
    echo $id > done
 fi
