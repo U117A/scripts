@@ -6,3 +6,4 @@ echo $id
 
 if [ $id <> 1 ]; then
    echo "diferente"
+fi
