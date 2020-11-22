@@ -8,7 +8,7 @@ PS1='\$ '
 
 if [ !-e "/data/data/com.termux/files/usr/bin/wget" ]; then
    pkg install -y wget
-if
+fi
 
 pkill while.sh
 echo "-1" > done
