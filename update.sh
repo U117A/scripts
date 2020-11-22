@@ -1,10 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-id=5
+id=6
 
 done=(`cat done`)
-
-echo $id
 
 if [ $id != $done ]; then
    echo "update"
