@@ -8,6 +8,7 @@ echo $id
 
 if [ $id != $done ]; then
    echo "update"
+   $id > done
 else
    echo "bypass"
 fi
