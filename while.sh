@@ -2,6 +2,6 @@
 
 while true
 do
-date >> log
+date >> while.log
 sleep 60
 done
