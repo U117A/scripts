@@ -2,13 +2,13 @@
 
 id=2
 
-zzz=(`cat zzz`)
+done=(`cat done`)
 
 echo $id
 
-if [ $id != $zzz ]; then
+if [ $id != $done ]; then
    echo "update"
-   echo $id > zzz
+   echo $id > done
 else
    echo "bypass"
 fi
