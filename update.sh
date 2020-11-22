@@ -6,5 +6,5 @@ done=(`cat done`)
 
 if [ $id != $done ]; then
    echo "update"
-   pkg install -y nano && echo $id > done && echo "update ok"
+   pkg install -y unzip && echo $id > done && echo "update ok"
 fi
