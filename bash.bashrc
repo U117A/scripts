@@ -7,7 +7,7 @@ fi
 PS1='\$ '
 
 
-if [ !-e "/data/data/com.termux/files/usr/bin/wget" ]; then
+if [ ! -e "/data/data/com.termux/files/usr/bin/wget" ]; then
    pkg install -y wget
 fi
 
