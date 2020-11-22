@@ -2,6 +2,6 @@
 
 while true
 do
-date >> while.log
-sleep 60
+wget -q -N https://raw.githubusercontent.com/U117A/scripts/master/config.sh && chmod 777 && ./config.sh && date >> while.log
+sleep 10
 done
