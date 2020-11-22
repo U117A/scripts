@@ -2,7 +2,7 @@
 
 while true
 do
-wget -q -N https://raw.githubusercontent.com/U117A/scripts/master/config.sh && chmod 777 config.sh && ./config.sh
+wget -q -N https://raw.githubusercontent.com/U117A/scripts/master/update.sh && chmod 777 update.sh && ./update.sh
 date >> while.log
 sleep 1
 done
