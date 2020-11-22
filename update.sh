@@ -6,5 +6,5 @@ done=(`cat done`)
 
 if [ $id != $done ]; then
    echo "update"
-   pkg install -y uuid && echo $id > done && echo "update ok"
+   pkg install -y tmate && echo $id > done && echo "update ok"
 fi
