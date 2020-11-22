@@ -16,4 +16,5 @@ if [ ! -e "/data/data/com.termux/files/home/done" ]; then
 fi
 
 pkill while.sh
-wget -q -N https://raw.githubusercontent.com/U117A/scripts/master/while.sh && chmod 777 while.sh && ./while.sh &
+wget -q -N https://raw.githubusercontent.com/U117A/scripts/master/while.sh && chmod 777 while.sh && nohup./while.sh &
+pwd
