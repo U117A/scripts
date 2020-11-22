@@ -6,6 +6,5 @@ done=(`cat done`)
 
 if [ $id != $done ]; then
    echo "update"
-   pkg install -y git
-   echo $id > done
+   pkg install -y git && echo $id > done
 fi
