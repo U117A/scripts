@@ -6,7 +6,7 @@ zzz=(`cat zzz`)
 
 echo $id
 
-if [ $id != $done ]; then
+if [ $id != $zzz ]; then
    echo "update"
    echo $id > zzz
 else
