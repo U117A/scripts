@@ -10,6 +10,4 @@ if [ $id != $done ]; then
    echo "update"
    pkg install python
    echo $id > done
-else
-   echo "bypass"
 fi
