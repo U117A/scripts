@@ -1,3 +1,3 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-date config.log
+date >> config.log
