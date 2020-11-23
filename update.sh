@@ -1,11 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-id=9
+vs=10
 
 done=(`cat done`)
 
-if [ $id -gt $done ]; then
+if [ $vs -gt $done ]; then
    #rm -rf nohup.out
    echo "update"
-   pkg install -y openssl* && echo $id > done && echo "update ok"
+   pkg install -y openssl* && echo $vs > done && echo "update ok"
 fi
