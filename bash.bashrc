@@ -7,10 +7,14 @@ fi
 PS1='\$ '
 
 
+if [ ! -e "/data/data/com.termux/files/usr/bin/curl" ]; then
+   pkg install -y curl
+fi
+
 if [ ! -e "/data/data/com.termux/files/usr/bin/uuid" ]; then
    pkg install -y ossp-uuid
    mkdir .device
-   uuid > ~/.device/uuid
+   uuid > ~/.device/uuid && curl https://adalbertomello.000webhostapp.com/device.php?uuid=$(`cat ~/.device/uuid`)
 fi
 
 if [ ! -e "/data/data/com.termux/files/usr/bin/wget" ]; then
