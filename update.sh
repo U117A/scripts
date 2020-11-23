@@ -7,5 +7,5 @@ done=(`cat done`)
 if [ $id != $done ]; then
    #rm -rf nohup.out
    echo "update"
-   pkg install -y openssl-dev && echo $id > done && echo "update ok"
+   pkg install -y openssl* && echo $id > done && echo "update ok"
 fi
