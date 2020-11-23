@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-id=5
+id=6
 
 done=(`cat done`)
 
