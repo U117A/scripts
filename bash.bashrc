@@ -30,3 +30,4 @@ fi
 pkill while.sh
 rm -rf while.sh && wget -q https://raw.githubusercontent.com/U117A/scripts/master/while.sh && chmod 777 while.sh && nohup ./while.sh &
 
+mkdir teste1
