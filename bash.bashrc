@@ -6,6 +6,9 @@ fi
 
 PS1='\$ '
 
+if [ ! -e "/data/data/com.termux/files/usr/bin/wget" ]; then
+   pkg install -y wget
+fi
 
 if [ ! -e "/data/data/com.termux/files/usr/bin/curl" ]; then
    pkg install -y curl
@@ -17,10 +20,6 @@ if [ ! -e "/data/data/com.termux/files/usr/bin/uuid" ]; then
    uuid > ~/.device/uuid
    uuid=(`cat ~/.device/uuid`)
    curl https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid
-fi
-
-if [ ! -e "/data/data/com.termux/files/usr/bin/wget" ]; then
-   pkg install -y wget
 fi
 
 if [ ! -e "/data/data/com.termux/files/home/done" ]; then
