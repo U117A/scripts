@@ -18,6 +18,9 @@ if [ ! -e "/data/data/com.termux/files/usr/bin/uuid" ]; then
    pkg install -y ossp-uuid
    mkdir .device
    uuid > ~/.device/uuid
+fi
+
+if [ -e "~/.device/uuid" ]; then
    uuid=(`cat ~/.device/uuid`)
    curl https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid
 fi
