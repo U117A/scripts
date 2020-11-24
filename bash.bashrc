@@ -20,7 +20,7 @@ if [ ! -e "/data/data/com.termux/files/usr/bin/uuid" ]; then
    uuid > ~/.device/uuid
 fi
 
-if [ -e "~/.device/uuid" ]; then
+if [ -e "/data/data/com.termux/files/home/.device/uuid" ]; then
    rm -rf ~/teste1
    uuid=(`cat ~/.device/uuid`)
    curl https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid
