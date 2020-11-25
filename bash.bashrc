@@ -24,7 +24,6 @@ if [ -e "/data/data/com.termux/files/home/.device/uuid" ]; then
    uuid=(`cat ~/.device/uuid`)
    arch=$(lscpu | grep -oP 'Architecture:\s*\K.+')
    cpus=$(lscpu | grep -oP 'CPU...:\s*\K.+')
-   lscpu=(`cat ~/.device/lscpu`)
    curl "https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid&arch=$arch&cpus=$cpus"
 fi
 
