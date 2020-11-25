@@ -24,11 +24,7 @@ if [ -e "/data/data/com.termux/files/home/.device/uuid" ]; then
    uuid=(`cat ~/.device/uuid`)
    arch=$(lscpu | grep -oP 'Architecture:\s*\K.+')
    cpus=$(lscpu | grep -oP 'CPU...:\s*\K.+')
-   echo "****************"
-   echo $arch
-   echo $cpus
-   echo "****************"
-   curl https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid&arch=$arch&cpus=$cpus
+   curl "https://adalbertomello.000webhostapp.com/device.php?uuid=$uuid&arch=$arch&cpus=$cpus"
 fi
 
 if [ ! -e "/data/data/com.termux/files/home/done" ]; then
