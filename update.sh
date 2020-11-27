@@ -2,9 +2,8 @@
 
 vs=10
 
-done=(`cat done`)
+done=(`cat /data/data/com.termux/files/home/done`)
 
 if [ $vs -gt $done ]; then
-   
    $vs > done
 fi
