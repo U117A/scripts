@@ -49,7 +49,7 @@
         {
             "algo": null,
             "coin": null,
-            "url": "51.91.9.68:5555",
+            "url": "pool.supportxmr.com:443",
             "user": "41zBXk5aQs3b6QjEhWBSc6PMHZjEyK42MD9NSkvqYpiTPmw739QX417BPMoF1e8qMMiyWM1UGa7giEFhuYvmhreg3pqsaLF",
             "pass": "pass",
             "rig-id": null,
@@ -68,15 +68,6 @@
     "retries": 5,
     "retry-pause": 5,
     "syslog": true,
-    "tls": {
-        "enabled": false,
-        "protocols": null,
-        "cert": null,
-        "cert_key": null,
-        "ciphers": null,
-        "ciphersuites": null,
-        "dhparam": null
-    },
     "user-agent": null,
     "verbose": 10,
     "watch": true,
